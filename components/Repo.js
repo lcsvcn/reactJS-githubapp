@@ -2,6 +2,7 @@ import React, { Component } from 'react';
  
 import { View, Text, Image, StyleSheet } from 'react-native';
 
+
 export default class Repo extends Component {
 	render() {
 		return(
@@ -49,7 +50,7 @@ export default class Repo extends Component {
 		repo: {
 			padding: 20,
 		    backgroundColor:'#FFF',
-		    height: 120,
+		    height: 100,
 		    marginBottom: 20,
 		    borderRadius: 5,
   			flexDirection: 'row',
@@ -57,8 +58,8 @@ export default class Repo extends Component {
   		},
 
   		repoImage : {
-  			width: 70,
-  			height: 70,
+  			width: 50,
+  			height: 50,
   		},
 
   		repoInfo: {
@@ -66,15 +67,13 @@ export default class Repo extends Component {
   		},
 
   		repoTitle: {
-  			marginLeft: 5,
-  			fontSize: 18,
+  			fontSize: 12,
   			fontWeight: 'bold',
   			color: '#000',
   		},
 
   		repoAuthor: {
-  			marginLeft: 5,
-  			fontSize: 17,
+  			fontSize: 12,
   			color: '#555',	
   			fontWeight: 'bold',
   			
@@ -85,7 +84,7 @@ export default class Repo extends Component {
   			justifyContent: 'space-between',
   			flexDirection: 'column',
   			marginRight: 10,
-  			marginLeft: 210,
+  			marginLeft: 200,
   		},
 
   		extraUp: {
@@ -95,7 +94,6 @@ export default class Repo extends Component {
 
   		extraDown : {
   			flexDirection: 'row',
-  			marginTop: 2,
   		},
 
 
@@ -110,7 +108,6 @@ export default class Repo extends Component {
   		imgUpdated: {
   			width: 15,
   			height: 15,
-  			marginTop: 4,
   		},
 
   		textWatch: {
@@ -118,9 +115,9 @@ export default class Repo extends Component {
   			alignSelf: 'stretch',
   			fontWeight: 'bold', 
   			color: '#000',
-  			fontSize: 15,
-
-  			marginLeft: 5,
+  			fontSize: 10,
+  			marginTop: 4,
+  			marginLeft: 3,
   		},
 
   		textUpdated: {
@@ -128,7 +125,7 @@ export default class Repo extends Component {
   			alignSelf: 'stretch',
   			fontWeight: 'bold',
   			color: '#000',
-  			fontSize: 15,
+  			fontSize: 10,
   			marginLeft: 5,
   		},
 
