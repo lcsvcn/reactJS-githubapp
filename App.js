@@ -27,7 +27,7 @@ state = {
 };
 
 async componentDidMount() {
-  const repos = JSON.parse(await AsyncStorage.getItem('repositories')) || [];
+  const repos = JSON.parse(await AsyncStorage.getItem('reposMem')) || [];
 
   this.setState({repos});
 }
@@ -39,13 +39,17 @@ _addRepository = async (newRepoText) => {
 
 
 if(response.message === "Not Found") {
-  console.warn("Wrong repo name !");
+  console.log("INVALID REPO NAME...");
 } else {
+  const str = response.updated_at;
     const repository = {
       id : response.id,
       thumbnail : response.owner.avatar_url,
       title : response.name,
       author : response.owner.login,
+      watch : response.watchers,
+      updated_day : str.substring(8, 10) + '/' + str.substring(5, 7) + '/' + str.substring(0, 4),
+      updated_time : str.substring(11, 16),
     };
 
     this.setState({
@@ -56,7 +60,7 @@ if(response.message === "Not Found") {
       ],
     });
   }
-  await AsyncStorage.setItem('repositories', JSON.stringify(this.state.repos));
+  await AsyncStorage.setItem('reposMem', JSON.stringify(this.state.repos));
 };
 
   render() {  
