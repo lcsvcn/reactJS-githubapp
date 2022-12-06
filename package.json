@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.2.0",
     "react-mfb": "^0.6.0",
-    "react-native": "0.52.2",
+    "react-native": "0.70.6",
     "react-notify-toast": "^0.4.0"
   },
   "devDependencies": {
